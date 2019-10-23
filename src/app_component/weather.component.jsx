@@ -5,6 +5,8 @@ const Weather = () =>{
         <div className="conteiner">
             <div className="cards">
                 <h1>Lviv</h1>
+                <h5 className="icons"></h5>
+                <i className="wi wi-day-sunny"></i>
             </div>
         </div>
     );
