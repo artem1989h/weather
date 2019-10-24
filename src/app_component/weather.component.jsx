@@ -1,15 +1,19 @@
 import React from "react";
 
-const Weather = () =>{
+const Weather = (props) =>{
     return(
         <div className="conteiner">
             <div className="cards">
-                <h1>Lviv</h1>
+                <h1>
+                {props.city},{props.country}
+                </h1>
                 <h5 className="icons"></h5>
                 <i className="wi wi-day-sunny display-1"></i>
                 <h1 className="temperature">25&deg;</h1>
 
                 {minmaxTemp(15,20)}
+
+                <h4 className="weather-description">Rain</h4>
             </div>
         </div>
     );
