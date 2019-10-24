@@ -23,7 +23,7 @@ const Form = props =>{
                         autoComplete="off"
                         placeholder="Country"/>
                     </div>
-                    <div className="col-md-3 mt-md-0">
+                    <div className="col-md-3 mt-md-0 py-2 text-md-left">
                         <button className="btn btn-warning">Get Weather</button>
                     </div>
                 </div>

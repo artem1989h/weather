@@ -5,13 +5,19 @@ form {
 form input[name="city"],
 form input[name="country"]{
     background-color: transparent;
-    color: white;
+    color:yellow;
     border: 0;
     border-bottom: 2px solid wheat;
     border-radius: 1px;
 }
 
 form input:focus{
-    background-color: transparent;
+    background-color: transparent !important;
     box-shadow: none !important;
+}
+
+form input
+.container::-webkit-input-placeholder
+{
+    color: yellow !important;
 }
