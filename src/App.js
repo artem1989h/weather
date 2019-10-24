@@ -6,6 +6,7 @@ import './App.css';
 import 'weather-icons/css/weather-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from './app_component/weather.component';
+import Form from './app_component/form.componen';
 
 
 const API_key="6769bee229c73c93d1cea3e53ea41fe5";
@@ -92,6 +93,7 @@ calCelsius(temp){
   render(){
     return(
     <div className="App">
+      <Form />
       <Weather 
       city={this.state.city} 
       country={this.state.country} 
