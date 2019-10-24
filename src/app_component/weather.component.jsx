@@ -8,7 +8,7 @@ const Weather = (props) =>{
                 {props.city},{props.country}
                 </h1>
                 <h5 className="icons"></h5>
-                <i className="wi wi-day-sunny display-1"></i>
+                <i className={`wi ${props.weathericon} display-1`}></i>
                 <h1 className="temperature">{props.temp_celsius}&deg;</h1>
 
                 {minmaxTemp(props.temp_min,props.temp_max)}

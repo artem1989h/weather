@@ -25,7 +25,16 @@ class App extends React.Component{
       error: false
     };
     this.getWeather();
+
+    this.weathericon={
+      Thunderstorm: "wi-thunderstorm"
+    }
   }
+
+calCelsius(temp){
+  let cell = Math.floor(temp - 273.15);
+  return cell;
+}
 
   getWeather= async() =>{
     const api_call= await fetch(
@@ -38,8 +47,14 @@ class App extends React.Component{
 
     this.setState({
       city: response.name,
-      country: response.sys.country
-    })
+      country: response.sys.country,
+      celsius: this.calCelsius(response.main.temp),
+      temp_max: this.calCelsius(response.main.temp_max),
+      temp_min: this.calCelsius(response.main.temp_min),
+      description: response.weather[0].description,
+      icon: this.weathericon.Thunderstorm
+
+    });
   }
   
   
@@ -50,9 +65,10 @@ class App extends React.Component{
       city={this.state.city} 
       country={this.state.country} 
       temp_celsius={this.state.celsius}
-      temp_min={this.state.temp_min}
       temp_max={this.state.temp_max}
+      temp_min={this.state.temp_min}
       description={this.state.description}
+      weathericon={this.state.icon}
       />
     </div>
     );
