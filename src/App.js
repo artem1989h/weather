@@ -59,7 +59,7 @@ calCelsius(temp){
       case rangeID >= 701&&rangeID <= 781:
         this.setState({icon: this.weathericon.Atmotphere});
         break;
-      case rangeID = 800&&rangeID:
+      case rangeID === 800:
         this.setState({icon: this.weathericon.Clear});
         break;
       case rangeID >= 801&&rangeID <= 804:
