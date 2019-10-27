@@ -5,8 +5,10 @@ const Weather = (props) =>{
         <div className="container text-light">
             <div className="cards pt-4">
                 <h1>{props.city}</h1>
-                <h5 className="icons"></h5>
-                <i className={`wi ${props.weathericon} display-1`}></i>
+                <h5 className="icons">
+                    <i className={`wi ${props.weathericon} display-1`} />
+                    </h5>
+                
 
                 {props.temp_celsius? (<h1 className="temperature">{props.temp_celsius}&deg;</h1>
                 ) :null}
